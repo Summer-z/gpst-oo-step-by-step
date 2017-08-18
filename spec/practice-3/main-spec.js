@@ -40,7 +40,7 @@ describe("Student", () => {
 
   });
 
-  it("should introduce there is not class assigned to this student, when this studen d" +
+  it("should introduce there is not class assigned to this student, when this student d" +
       "oesn't append to this class",
   () => {
     let clazz = new Class(2);
