@@ -53,7 +53,7 @@ describe("Person", () => {
 
   describe("Teacher", () => {
 
-    it("should have field name, age and klass", () => {
+    it("should have field name, age and class", () => {
       let clazz1 = new Class(2);
       let clazz2 = new Class(3);
       let teacher = new Teacher("Joun", 21, [clazz1, clazz2]);
