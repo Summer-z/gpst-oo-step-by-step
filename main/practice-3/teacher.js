@@ -1,8 +1,11 @@
 const Person = require('./person');
 class Teacher extends Person{
-    constructor(name, age, [clazz1, clazz2]) {
+    constructor(name, age, clazzes) {
         super(name, age);
-        this.clazzes = [clazz1, clazz2];
+        this.clazzes = clazzes;
+        this.clazzes.forEach(clazz => {
+            clazz.teacher = this;
+        })
     }
     introduce() {
         let arr =this.clazzes.filter(ele => ele !== undefined);
@@ -17,6 +20,8 @@ class Teacher extends Person{
             return clazz.hasStudent(student);
         });
     }
+    notifyStudentAppended() {}
+    notifyLeaderAssigned() {}
 }
 
 module.exports = Teacher;
